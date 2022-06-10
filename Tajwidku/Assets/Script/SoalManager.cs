@@ -21,11 +21,13 @@ public class SoalManager : MonoBehaviour
 
     }
     public GameObject benar, salah, selesai, TextSoal, Waktu, Button;
+    private bool Benar;
     public int skor;
     public float waktu;
     private int nilaiAcak;
+    private Animator anim;
     int nomorSoal = -1;
-    Text textSoal, textWaktu, textSkor;
+    Text textSoal, textWaktu, textSkor, papanSkor;
     Image textA, textB, textC;
     public List<Soal> KumpulanSoal;
     void Start()
@@ -38,16 +40,16 @@ public class SoalManager : MonoBehaviour
         textC = GameObject.Find("Button C").GetComponent<Image>();
 
         textWaktu = GameObject.Find("TextWaktu").GetComponent<Text>();
-
         nilaiAcak = Random.RandomRange(0, KumpulanSoal.Count);
         nomorSoal++;
+        anim = GetComponent<Animator>();
+
         // textSoal.text = KumpulanSoal[nomorSoal].soal;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         textWaktu.text = "" + waktu;
         waktu -= Time.deltaTime;
         if (waktu <= 0)
@@ -68,7 +70,6 @@ public class SoalManager : MonoBehaviour
         {
             Selesai();
         }
-
     }
     void Selesai()
     {
@@ -77,7 +78,7 @@ public class SoalManager : MonoBehaviour
         Waktu.SetActive(false);
         Button.SetActive(false);
         TextSoal.SetActive(false);
-        textSkor.text = "Skor : " + skor;
+        textSkor.text = "" + skor;
         // GameObject.Find("TextWaktu").SetActive(false);
         // GameObject.Find("TextSoal").SetActive(false);
         // GameObject.Find("Button").SetActive(false);
@@ -116,14 +117,24 @@ public class SoalManager : MonoBehaviour
     }
     void feed_benar()
     {
-        skor++;
+        skor += 20;
         benar.SetActive(false);
         benar.SetActive(true);
         salah.SetActive(false);
     }
+    // void feed_benar()
+    // {
+    //     Benar = true;
+    //     skor += 10;
+    // }
     void feed_salah()
     {
         salah.SetActive(false);
         salah.SetActive(true);
+    }
+    void RunAnimations()
+    {
+        // anim.SetFloat("Movement", Mathf.Abs(move));
+
     }
 }

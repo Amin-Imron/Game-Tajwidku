@@ -9,18 +9,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/About.unity
-    guid: a7be1bc1454e7fb49832e358ed45761e
-  - enabled: 1
-    path: Assets/Scenes/Course.unity
-    guid: eafe4632358db164f9d92d2977b096b9
+    path: Assets/Scenes/Pengaturan 1.unity
+    guid: 21751107ec293f14f9772299372e7a73
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 9ba4a893944609145838c5fa18dca201
   - enabled: 1
-    path: Assets/Scenes/Tebak Hukum Tajwid.unity
-    guid: 2339aeee91db1aa4f8527257d228799b
+    path: Assets/Scenes/Course.unity
+    guid: eafe4632358db164f9d92d2977b096b9
   - enabled: 1
-    path: Assets/Scenes/Easy Level.unity
+    path: Assets/Scenes/Course/Mad.unity
+    guid: 5ad283b2435ef76439011d338d71fd1e
+  - enabled: 1
+    path: Assets/Scenes/Course/Mim Sukun.unity
+    guid: 5a9542779af72fb43bbdd02f659f0a89
+  - enabled: 1
+    path: Assets/Scenes/Course/Nun Sukun & Tanwin.unity
+    guid: 8d6b80272ee3a5b44839bb1f9fec8efa
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: a7be1bc1454e7fb49832e358ed45761e
+  - enabled: 1
+    path: Assets/Scenes/THT/Easy Level THJ.unity
     guid: bb3effb7e3e46ef48976a40c63dfc9ce
+  - enabled: 1
+    path: Assets/Scenes/TBA/Easy Level TBA.unity
+    guid: 4cd78b3454292a748b62de4867fa5f0c
   m_configObjects: {}
